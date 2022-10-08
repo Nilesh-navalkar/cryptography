@@ -1,6 +1,6 @@
 import socket
-import exp1 as e
-import exp1tras as t
+import playfair as e
+import keycoltransposition as t
 k=[["r","p","m","l","d"],["s","a","x","i","c"],["h","k","q","u","y"],["e","w","o","z","g"],["b","f","t","v","n"]]
 key=[2,0,3,4,1]
 #encrypty(p,k)
