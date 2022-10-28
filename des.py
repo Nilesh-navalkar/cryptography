@@ -1,0 +1,14 @@
+from Crypto.Cipher import DES
+
+def encrypt(message,key):
+    obj = DES.new(key, DES.MODE_OFB,'ThiIV456')
+    #message = "The answer is no"
+    ciphertext = obj.encrypt(message)
+    print(ciphertext)
+    return ciphertext
+
+def decrypt(ciphertext,key):
+    obj2 = DES.new(key, DES.MODE_OFB,'ThiIV456')
+    pt=obj2.decrypt(ciphertext)
+    print(pt)
+    return pt

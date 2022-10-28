@@ -1,5 +1,7 @@
 import math
 import random
+'''
+***key generation***
 p=int(input("enter 1st prime number : "))
 q=int(input("enter 2nd prime number : "))
 
@@ -11,14 +13,15 @@ for i in range(2,phi):
         alle.append(i)
 #print(alle)
 e=random.choice(alle)
-e=3
-print("e = ",e)
+#e=3
+#print("e = ",e)
 ei=pow(e, -1, phi)
-print("einv = ",ei)
+#print("einv = ",ei)
 d=ei%phi
-print("d = ",d)
+#print("d = ",d)
 
 message="p"
+'''
 def encrypt(message,e,n):
     message=message.replace(" ","")
     m=""
@@ -33,13 +36,14 @@ def encrypt(message,e,n):
     #print(m)
 
     c=pow(int(m),e)%n
-    print("cypertext : ",c)
+    #print("cypertext : ",c)
     return c
 
 def decrypt(c,d,n):
     p=pow(int(c),d)%n
-    print("plaintext : " ,p)
-    return p
+    o=ord("a")+p
+    #print("plaintext : " ,p)
+    return chr(o)
 
-c=encrypt(message,e,n)
-d=decrypt(c,d,n)
+#c=encrypt(message,e,n)
+#d=decrypt(c,d,n)
