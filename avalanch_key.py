@@ -1,16 +1,18 @@
 import aes
 import des
 
+#avalanch key
+
 keya='This is a key123'
-keyd='key12345'
-print("\n\navalanch in aes message 1 bit changed : ")
-message = "The answer is no"
+bitchangedkey='This is a kfy123'
+print("\n\navalanch in aes key changed from ",keya,"to ",bitchangedkey," : ")
+message = "123456xxxxxxxxxx"
 c1=aes.encrypt(message,keya)
-bitchangedkey='This is a key121'
 c2=aes.encrypt(message,bitchangedkey)
 
-print("\n\navalanch in des message 1 bit changed : ")
-message = "The answer is no"
+keyd='key12345'
+bitchangedkey='kfy12345'
+print("\n\navalanch in des key changed from ",keyd,"to ",bitchangedkey," : ")
+message = "123456xxxxxxxxxx"
 c1=des.encrypt(message,keyd)
-bitchangedkey='key12346'
 c2=des.encrypt(message,bitchangedkey)
